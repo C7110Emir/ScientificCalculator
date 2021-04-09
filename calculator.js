@@ -28,6 +28,14 @@ const tan = document.getElementById("tangent")
 let a; 
 let b;
 
+function isNumberKey(evt){
+    var charCode = (evt.which) ? evt.which : evt.keyCode
+    if (charCode > 31 && (charCode < 48 || charCode > 57))
+        return false;
+    return true;
+}
+
+
 one.addEventListener('click',function(){
     screen.value += 1
     zero.disabled = false
@@ -84,8 +92,13 @@ zero.addEventListener("click",function(){
 } )
 
 dot.addEventListener("click",function(){
-    screen.value += '.'
-    dot.disabled = true;
+    if (screen.value.includes(".") == true){
+        return false
+    }
+    if (screen.value.includes(".") == false){
+        screen.value += '.'
+    }
+    
 })
 
 ac.addEventListener("click",function(){
@@ -93,4 +106,10 @@ ac.addEventListener("click",function(){
 
 })
 
+
+plus.addEventListener('click',function(){
+
+    
+    
+})
 
