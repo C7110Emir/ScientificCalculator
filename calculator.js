@@ -166,5 +166,68 @@ pi.addEventListener("click",function(){
 
 
 square.addEventListener("click",function(){
+if (screen.value == ""){
+    return false
+}
+else if(screen.value.includes("+") == true || screen.value.includes("-") == true || screen.value.includes("/") == true ||screen.value.includes("*") == true){
+    return false
+}
+
+else{
+    screen.value = eval(screen.value * screen.value)
+
+}
+})
+
+sqrt.addEventListener("click",function(){
+    if (screen.value == ""){
+        return false
+    }
+    else if(screen.value.includes("+") == true || screen.value.includes("-") == true || screen.value.includes("/") == true ||screen.value.includes("*") == true){
+        return false
+    }
     
+    else{
+        screen.value = Math.sqrt(screen.value)
+    
+    }
+})
+factorial.addEventListener("click",function(){
+    if (screen.value == ""){
+        return false
+    }
+    else if(screen.value.includes("+") == true || screen.value.includes("-") == true || screen.value.includes("/") == true ||screen.value.includes("*") == true){
+        return false
+    }
+    else{
+        screen.value = factorialize(parseInt(screen.value))
+
+    }
+    }
+)
+
+
+function factorialize(num) {
+    if (num === 0 || num === 1)
+        return 1;
+    for (var i = num - 1; i >= 1; i--) {
+        num *= i;
+    }
+    return num;
+    }
+
+
+log.addEventListener('click',function(){
+    screen.value = Math.log(parseInt((screen.value)))
+})
+tan.addEventListener("click",function(){
+    screen.value = Math.tan(screen.value * Math.PI/180)
+})
+
+sin.addEventListener("click",function(){
+    screen.value = Math.sin(screen.value)
+})
+
+cos.addEventListener("click",function(){
+    screen.value = Math.cos(screen.value)
 })
