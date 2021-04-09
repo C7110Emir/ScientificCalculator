@@ -108,8 +108,63 @@ ac.addEventListener("click",function(){
 
 
 plus.addEventListener('click',function(){
-
-    
-    
+    if(screen.value.substr(-1) == "+" ||screen.value.substr(-1) == "-" || screen.value.substr(-1) == "/" || screen.value.substr(-1) == "*"){
+        return false
+    }
+    else{
+        screen.value += "+"
+    }
+    zero.disabled = true
 })
 
+equal.addEventListener("click",function(){
+    if(screen.value == ""){
+        return false
+    }
+    screen.value = eval(screen.value)
+    zero.disabled = true
+})
+
+multiply.addEventListener("click",function(){
+    if (screen.value == ""){
+        return false
+    }
+    if(screen.value.substr(-1) == "+" ||screen.value.substr(-1) == "-" || screen.value.substr(-1) == "/" || screen.value.substr(-1) == "*"){
+        return false
+    }
+    else{
+    screen.value += "*"
+    }
+})
+
+divide.addEventListener("click",function(){
+    if (screen.value == ""){
+        return false
+    }
+    if(screen.value.substr(-1) == "+" ||screen.value.substr(-1) == "-" || screen.value.substr(-1) == "/" || screen.value.substr(-1) == "*"){
+        return false
+    }
+    else{
+    screen.value += "/"
+    }
+})
+
+minus.addEventListener("click",function(){
+
+if(screen.value.substr(-1) == "-"){
+    return false
+}
+else{
+    screen.value += "-"
+}
+})
+
+pi.addEventListener("click",function(){
+    screen.value += Math.PI.toFixed(2)
+})
+
+
+
+square.addEventListener("click",function(){
+    
+})
