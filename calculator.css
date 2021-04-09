@@ -8,8 +8,9 @@ body{
     background-color:white;
     opacity:0.7;
     position:absolute;
-    left:35%;
-    top:20%;
+    left:650.750px;
+    top:195.391px;
+    right:244.250px;
     display: grid;
     grid-template-columns:50px 50px 50px 50px 50px ;
     grid-template-rows: 50px 50px 50px 50px 50px ;
@@ -26,6 +27,10 @@ body{
    margin-right:10px
 }
 #screen {
+    position:absolute;
+    left:675.750px;
+    top:75.391px;
+    right:244.250px;
     width: 500px;;
     height:100px;
     outline: none;

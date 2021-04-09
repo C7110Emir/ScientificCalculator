@@ -25,10 +25,72 @@ const sin = document.getElementById("sinus")
 const cos = document.getElementById("cosinus")
 const tan = document.getElementById("tangent") 
 
+let a; 
+let b;
+
+one.addEventListener('click',function(){
+    screen.value += 1
+    zero.disabled = false
+})
+
+two.addEventListener('click',function(){
+    screen.value += 2
+    zero.disabled = false
+})
+
+three.addEventListener('click', function(){
+    screen.value += 3
+    zero.disabled = false
+})
+
+four.addEventListener('click', function(){
+    screen.value += 4
+    zero.disabled = false
+})
+
+five.addEventListener('click', function() {
+    screen.value += 5
+    zero.disabled = false
+})
+
+six.addEventListener('click', function(){
+    screen.value += 6
+    zero.disabled = false
+})
 
 
+seven.addEventListener('click', function(){
+    screen.value += 7
+    zero.disabled = false
+})
 
+eight.addEventListener('click', function(){
+    screen.value += 8
+    zero.disabled = false
+})
 
+nine.addEventListener("click", function(){
+    screen.value += 9
+    zero.disabled = false
+})
 
+zero.addEventListener("click",function(){
+    if (screen.value == "") {
+        return
+    }
+    if (screen.value != "") {
+        screen.value += 0
+    }
+} )
+
+dot.addEventListener("click",function(){
+    screen.value += '.'
+    dot.disabled = true;
+})
+
+ac.addEventListener("click",function(){
+    screen.value = ""
+
+})
 
 
